@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imageView_blocking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I15-PZ-Lsl">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8m-cf-tna">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="984"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nlv-rC-NLH">
+                                                <rect key="frame" x="0.0" y="0.0" width="765.5" height="1122.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nlv-rC-NLH" firstAttribute="leading" secondItem="b8m-cf-tna" secondAttribute="leading" id="Vj3-l8-5vk"/>
+                                            <constraint firstItem="nlv-rC-NLH" firstAttribute="top" secondItem="b8m-cf-tna" secondAttribute="top" id="Z48-w6-gM5"/>
+                                            <constraint firstItem="nlv-rC-NLH" firstAttribute="height" secondItem="b8m-cf-tna" secondAttribute="height" multiplier="1.14056" id="cty-E5-jtf"/>
+                                            <constraint firstItem="nlv-rC-NLH" firstAttribute="width" secondItem="b8m-cf-tna" secondAttribute="width" multiplier="0.996875" id="ddW-ii-1Kr"/>
+                                            <constraint firstAttribute="bottom" secondItem="nlv-rC-NLH" secondAttribute="bottom" constant="-70" id="ueZ-MN-nEt"/>
+                                            <constraint firstAttribute="trailing" secondItem="nlv-rC-NLH" secondAttribute="trailing" constant="1" id="zFZ-Hw-oIa"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="gCZ-0K-cAr"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="97Y-8h-ckC"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Wfg-qU-uAf"/>
+                                        </connections>
+                                    </scrollView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CrI-Ob-uWw">
+                                        <rect key="frame" x="0.0" y="989" width="768" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yga-TI-fJH">
+                                                <rect key="frame" x="0.0" y="0.0" width="124" height="35"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" image="lock" catalog="system">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="bttn_lock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JRp-JD-cvh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62v-vf-c4o">
+                                                <rect key="frame" x="129" y="0.0" width="123.5" height="35"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" title="Gallery" image="photo.on.rectangle" catalog="system">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loadImageBttnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQ5-u0-3RG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRX-Fp-E9U">
+                                                <rect key="frame" x="257.5" y="0.0" width="124" height="35"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" image="arrow.counterclockwise" catalog="system">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="left_bttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMX-Kn-dFt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQH-bW-MdZ">
+                                                <rect key="frame" x="386.5" y="0.0" width="124" height="35"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" image="arrow.clockwise" catalog="system">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="right_bttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HBj-wh-WqU"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0w-mf-zOg">
+                                                <rect key="frame" x="515.5" y="0.0" width="123.5" height="35"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-fh-bS2">
+                                                <rect key="frame" x="644" y="0.0" width="124" height="35"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" image="lightbulb" catalog="system">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="light_bttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYK-dK-A3H"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="its-4t-HRd"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I15-PZ-Lsl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Avf-0O-XIY"/>
+                            <constraint firstItem="I15-PZ-Lsl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NrE-5d-R04"/>
+                            <constraint firstItem="I15-PZ-Lsl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhC-45-k4D"/>
+                            <constraint firstItem="I15-PZ-Lsl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pe0-Su-Nci"/>
+                            <constraint firstItem="I15-PZ-Lsl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sNs-4w-RgS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I15-PZ-Lsl" secondAttribute="bottom" id="wnv-O3-iGL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button_txt" destination="yga-TI-fJH" id="nEk-i7-Gf9"/>
+                        <outlet property="imageView" destination="nlv-rC-NLH" id="dst-hy-2DA"/>
+                        <outlet property="scrollView" destination="b8m-cf-tna" id="cCC-gG-uFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52.5" y="-24.295774647887324"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
+        <image name="lightbulb" catalog="system" width="113" height="128"/>
+        <image name="lock" catalog="system" width="128" height="128"/>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="98"/>
+    </resources>
+</document>
