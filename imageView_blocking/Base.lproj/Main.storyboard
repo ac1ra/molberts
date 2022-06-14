@@ -39,11 +39,11 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Wfg-qU-uAf"/>
                                         </connections>
                                     </scrollView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CrI-Ob-uWw">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CrI-Ob-uWw">
                                         <rect key="frame" x="0.0" y="989" width="768" height="35"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yga-TI-fJH">
-                                                <rect key="frame" x="0.0" y="0.0" width="124" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="35"/>
                                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" image="lock" catalog="system">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -52,52 +52,66 @@
                                                     <action selector="bttn_lock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JRp-JD-cvh"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62v-vf-c4o">
-                                                <rect key="frame" x="129" y="0.0" width="123.5" height="35"/>
-                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="Gallery" image="photo.on.rectangle" catalog="system">
-                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="loadImageBttnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQ5-u0-3RG"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRX-Fp-E9U">
-                                                <rect key="frame" x="257.5" y="0.0" width="124" height="35"/>
-                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" image="arrow.counterclockwise" catalog="system">
-                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="left_bttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMX-Kn-dFt"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQH-bW-MdZ">
-                                                <rect key="frame" x="386.5" y="0.0" width="124" height="35"/>
-                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" image="arrow.clockwise" catalog="system">
-                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="right_bttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HBj-wh-WqU"/>
-                                                </connections>
-                                            </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0w-mf-zOg">
-                                                <rect key="frame" x="515.5" y="0.0" width="123.5" height="35"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYk-E2-JOM">
+                                                <rect key="frame" x="157.5" y="0.0" width="610.5" height="35"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dmO-N0-I8R">
+                                                        <rect key="frame" x="0.0" y="0.0" width="610.5" height="35"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62v-vf-c4o">
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="35"/>
+                                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <state key="normal" title="Gallery" image="photo.on.rectangle" catalog="system">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="loadImageBttnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQ5-u0-3RG"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRX-Fp-E9U">
+                                                                <rect key="frame" x="152.5" y="0.0" width="153" height="35"/>
+                                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <state key="normal" image="arrow.counterclockwise" catalog="system">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="left_bttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMX-Kn-dFt"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQH-bW-MdZ">
+                                                                <rect key="frame" x="305.5" y="0.0" width="152.5" height="35"/>
+                                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <state key="normal" image="arrow.clockwise" catalog="system">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="right_bttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kkg-aI-1NI"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-fh-bS2">
+                                                                <rect key="frame" x="458" y="0.0" width="152.5" height="35"/>
+                                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <state key="normal" image="lightbulb" catalog="system">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="light_bttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYK-dK-A3H"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="dmO-N0-I8R" firstAttribute="top" secondItem="bYk-E2-JOM" secondAttribute="top" id="7ZX-Du-0Rg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dmO-N0-I8R" secondAttribute="bottom" id="8l0-Ao-1a3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dmO-N0-I8R" secondAttribute="trailing" id="AIr-gf-zqP"/>
+                                                    <constraint firstItem="dmO-N0-I8R" firstAttribute="leading" secondItem="bYk-E2-JOM" secondAttribute="leading" id="iqI-M5-zNE"/>
+                                                </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-fh-bS2">
-                                                <rect key="frame" x="644" y="0.0" width="124" height="35"/>
-                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" image="lightbulb" catalog="system">
-                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="light_bttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GYK-dK-A3H"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="yga-TI-fJH" firstAttribute="width" secondItem="bYk-E2-JOM" secondAttribute="width" multiplier="0.25" id="aqJ-Zz-MeW"/>
                                             <constraint firstAttribute="height" constant="35" id="its-4t-HRd"/>
                                         </constraints>
                                     </stackView>
@@ -116,7 +130,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="button_txt" destination="yga-TI-fJH" id="nEk-i7-Gf9"/>
+                        <outlet property="button_leftTxt" destination="YRX-Fp-E9U" id="N7y-hx-m3N"/>
+                        <outlet property="button_rightTxt" destination="RQH-bW-MdZ" id="u85-QY-H1s"/>
+                        <outlet property="button_txt" destination="a6d-fh-bS2" id="TQK-uY-s5X"/>
+                        <outlet property="galleryBttnTxt" destination="62v-vf-c4o" id="QpX-DA-Psa"/>
                         <outlet property="imageView" destination="nlv-rC-NLH" id="dst-hy-2DA"/>
                         <outlet property="scrollView" destination="b8m-cf-tna" id="cCC-gG-uFc"/>
                     </connections>

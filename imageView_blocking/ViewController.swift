@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIScrollViewDelegate {
     @IBOutlet weak var button_txt: UIButton!
+    @IBOutlet weak var button_leftTxt: UIButton!
+    @IBOutlet weak var button_rightTxt: UIButton!
+    @IBOutlet weak var galleryBttnTxt: UIButton!
+    
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -24,6 +28,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.scrollView.maximumZoomScale = 6.0
         self.imageView.contentMode = .center
         UIApplication.shared.isIdleTimerDisabled = true
+        
+        modalPresentationCapturesStatusBarAppearance = true
 
     }
 
@@ -41,11 +47,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 button.isSelected = false
                 button.setTitle("Unlock", for: .normal)
                 button.setImage(UIImage(systemName: "lock.open"), for: .normal)
+                button_txt.isHidden = false
+                button_leftTxt.isHidden = false
+                button_rightTxt.isHidden = false
+                galleryBttnTxt.isHidden = false
         } else {
             scrollView.isUserInteractionEnabled = false
             button.isSelected = true
-            button.setTitle("Lock", for: .selected)
+            button.setTitle("Locked", for: .selected)
             button.setImage(UIImage(systemName: "lock"), for: .selected)
+            button_txt.isHidden = true
+            button_leftTxt.isHidden = true
+            button_rightTxt.isHidden = true
+            galleryBttnTxt.isHidden = true
         }
     }
 }
@@ -69,5 +83,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func right_bttn(_ sender: Any) {
         imageView.transform = imageView.transform.rotated(by: .pi / 2)
     }
-    
+    func preferStatusBarHidden() -> Bool{
+        return true
+    }
 }
